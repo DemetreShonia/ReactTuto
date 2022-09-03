@@ -1,4 +1,5 @@
-import ExpenseItem from "./Components/ExpenseItem";
+import React from "react";
+import ExpenseItem from "./Components/Expenses/ExpenseItem";
 import Expenses from "./Components/Expenses";
 
 function App() {
@@ -14,11 +15,11 @@ function App() {
       date: new Date(2001, 3, 12),
     },
   ];
+
   return (
     <div className="App">
       <h2>Let's get started!</h2>
-      <Expenses expense={expenses[0]} />
-      <Expenses expense={expenses[1]} />
+      <Expenses items={expenses} />
     </div>
   );
 }
